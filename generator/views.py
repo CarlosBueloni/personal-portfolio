@@ -2,7 +2,7 @@ from django.shortcuts import render
 import random
 import string
 # Create your views here.
-def index(request):
+def home(request):
     return render(request, 'generator/home.html')
 
 def password(request):
