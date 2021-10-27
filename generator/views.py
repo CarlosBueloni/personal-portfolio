@@ -3,7 +3,7 @@ import random
 import string
 # Create your views here.
 def index(request):
-    return render(request, 'generator/index.html')
+    return render(request, 'generator/home.html')
 
 def password(request):
     characters = list(string.ascii_lowercase)
