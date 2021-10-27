@@ -2,8 +2,8 @@ from django.shortcuts import render
 import random
 import string
 # Create your views here.
-def home(request):
-    return render(request, 'generator/home.html')
+def generator(request):
+    return render(request, 'generator/generator.html')
 
 def password(request):
     characters = list(string.ascii_lowercase)
