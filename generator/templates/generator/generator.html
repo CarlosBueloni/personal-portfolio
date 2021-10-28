@@ -1,0 +1,44 @@
+{% extends "portfolio/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+
+<div class="container text-center">
+    <h1>Password Generator</h1>
+    <div class="container text-center">
+        <form class="form" action="{% url 'generator:password' %}">
+            <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Length</label>
+            <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" name="length">
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12" selected="selected">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+            </select>
+
+            <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" name="uppercase" id="uppercase" >
+                    <label class="form-check-label" for="uppercase">Uppercase</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" name="numbers" id="numbers">
+                    <label class="form-check-label" for="numbers">Numbers</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" name="special" id="special">
+                    <label class="form-check-label" for="special">Special Characters</label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary my-1">Submit</button>
+        </form>
+    </div>
+</div>
+    
+    {% endblock %}
